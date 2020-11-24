@@ -1,0 +1,20 @@
+{% autoescape off %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <title>{{ reminder.event.title }} reminder!</title>
+</head>
+<body>
+<h3>Hi, {{ reminder.member.first_name }}!</h3>
+
+<p>Don't forget about your event, {{ reminder.event.title }}, coming up on {{ reminder.event.start_time|date:"F d, Y" }}
+    at {{ reminder.event.start_time|date:"H:m" }}! </p>
+
+<p>For more details, login to your account at http://{{ domain }}{% url 'login' %}.</p>
+
+<p>Have a great day!</p>
+</body>
+</html>
+{% endautoescape %}
+

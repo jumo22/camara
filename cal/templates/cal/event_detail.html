@@ -1,0 +1,49 @@
+{% extends "announcements/base.html" %}
+{% block content %}
+<article class="media content-section">
+    <div class="media-body">
+        <div class="article-metadata">
+            <small class="text-muted">posted on {{ event.date_posted|date:"F d, Y" }}</small>
+            {% if object.author == user %}
+            <div>
+                <a class="btn btn-secondary btn-sm mt-1 mb-1" href="{% url 'cal:event-update' event.id %}">Edit</a>
+                <a class="btn btn-danger btn-sm mt-1 mb-1" href="{% url 'cal:event-delete' event.id %}">Delete</a>
+            </div>
+            {% endif %}
+        </div>
+        <div class="d-flex justify-content-between">
+            <h2 class="article-title">{{ event.title }}</h2>
+<!--            <div class="modal fade" tabindex="-1" role="dialog" id="modal">-->
+<!--                <div class="modal-dialog" role="document">-->
+<!--                    <div class="modal-content">-->
+
+<!--                    </div>-->
+<!--                </div>-->
+<!--            </div>-->
+                <a class="btn btn-outline-info" href="{% url 'cal:create-reminder' %}">Set reminder</a>
+        </div>
+        <p class="article-content">{{ event.start_time|date:"H:m" }} - {{ event.end_time|date:"H:m" }}, {{ event.start_time|date:"F d" }} - {{ event.end_time|date:"F d, Y" }}</p>
+        <p class="article-content">{{ event.description }}</p>
+        {% for tag in event.tag.all %}
+            <small class="text-muted">{{ tag }} </small>
+        {% endfor %}
+        <div class="d-flex justify-content-center">
+            <img src="{{ event.image.url }}" alt="Unable to load image" class="w3-hover-opacity">
+        </div>
+
+<!--        <script type="text/javascript">-->
+<!--                        $(function() {-->
+
+<!--                            $(".create-reminder").modalForm({-->
+<!--                                formURL: "{% url 'cal:create-reminder' %}"-->
+<!--                            });-->
+
+<!--                        });-->
+
+
+
+<!--        </script>-->
+    </div>
+</article>
+
+{% endblock content %}

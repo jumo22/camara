@@ -1,0 +1,16 @@
+{% extends 'announcements/base.html' %}
+{% load crispy_forms_tags %}
+{% block title %}
+New Event
+{% endblock %}
+
+{% block content %}
+
+    <form method="POST" enctype="multipart/form-data">
+      {% csrf_token %}
+      <table class="form form-table">
+        {{ form|crispy }}
+        <tr><td colspan="2"><button type="submit" class="btn btn-info right"> Save </button></td></tr>
+      </table>
+    </form>
+{% endblock %}

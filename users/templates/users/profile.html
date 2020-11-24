@@ -1,0 +1,28 @@
+{% extends "announcements/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+      <div class="content-section">
+      <div class="media d-flex align-items-center">
+        <img class="rounded-circle account-img" src="{{ user.profile.image.url }}">
+        <div class="media-body" style="position:center">
+          <h2 class="account-heading d-flex justify-content-center">{{ user.first_name}} {{ user.last_name }}</h2>
+          <h6><p class="text-secondary d-flex justify-content-center">You are currently using: {{ user.email }}</p></h6>
+          <h6><a class="d-flex justify-content-center" href="{% url 'password_reset' %}">Change Password</a></h6>
+          <h6><a class="d-flex justify-content-center" href="{% url 'profile-detail' user.profile.id %}">Back To Profile</a></h6>
+        </div>
+      </div>
+      <!-- FORM HERE -->
+      <form method="POST" enctype="multipart/form-data">
+          {% csrf_token %}
+          <fieldset class="form-group">
+            <legend class="border-bottom mb-4">My Profile</legend>
+            {{ u_form|crispy }}
+            {{ p_form|crispy }}
+          </fieldset>
+          <div class="form-group">
+            <button class="btn btn-outline-info" type="submit">Update!</button>
+          </div>
+        </form>
+
+    </div>
+{% endblock content %}

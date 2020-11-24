@@ -1,0 +1,47 @@
+{% extends "announcements/base.html" %}
+
+{% block content %}
+
+<div class="card-columns">
+    {% for event in events %}
+    <div class="card">
+        <img class="card-img-top img-fluid" src="{{ event.image.url }}" alt="Unable to load image">
+        <div class="card-block">
+            <div class="card-body">
+                <h5><a class="card-title" href="{% url 'cal:event-detail' event.id %}">{{ event.title}}</a></h5>
+                <p class="card-text">{{ event.start_time|date:"j F Y, H:i" }}</p>
+                <p class="card-text">{{ event.description}}</p>
+            </div>
+            <div class="card-footer">
+                {% for tag in event.tag.all %}
+                    <small class="text-muted">{{ tag }} </small>
+                {% endfor %}
+                <small><a class="mr-2" href="{% url 'profile-detail' event.author.profile.id %}">posted by {{ event.author }}</a></small>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+<br/><br/><br/>
+{% if is_paginated %}
+
+    {% if page_obj.has_previous %}
+        <a class="btn btn-outline-info mb-4" href="?page=1">First</a>
+        <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+    {% endif %}
+
+    {% for num in page_obj.paginator.page_range %}
+        {% if page_obj.number == num %}
+            <a class="btn btn-info mb-4" href="?page={{ num }}">{{ num }}</a>
+        {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+            <a class="btn btn-outline-info mb-4" href="?page={{ num }}">{{ num }}</a>
+        {% endif %}
+    {% endfor %}
+
+    {% if page_obj.has_next %}
+        <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.next_page_number }}">Next</a>
+        <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+    {% endif %}
+
+{% endif %}
+{% endblock content %}

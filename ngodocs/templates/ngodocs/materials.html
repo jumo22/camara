@@ -1,0 +1,27 @@
+{% extends "announcements/base.html" %}
+{% load static %}
+{% block content %}
+<h2 class="p-2 pb-4" style="color: #0098cc">Materials and Templates</h2>
+<div>
+    {% for mat in materials %}
+        <article class="media content-section">
+            <div class="media-body">
+                <div class="d-flex justify-content-between">
+                    <h6><a class="article-title" href="{{ mat.document.url }}">{{ mat.title }}
+                    </a></h6>
+                    <small class="text-muted">status: {{ mat.status }}</small>
+                </div>
+                <div class="d-flex justify-content-between">
+                    <small class="text-muted">added: {{ mat.date_posted|date:"j F Y, H:i" }}</small>
+                    <div>
+                    {% for tag in mat.tag.all %}
+                      <small class="text-muted">{{ tag }} </small>
+                    {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </article>
+    {% endfor %}
+</div>
+
+{% endblock content %}

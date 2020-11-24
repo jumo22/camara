@@ -1,0 +1,50 @@
+{% extends "announcements/base.html" %}
+
+{% block content %}
+<div class="content-section">
+    <div class="media d-flex align-items-center">
+        <img class="img-fluid rounded-circle account-img" src="{{ profile.image.url }}">
+        <div class="media-body" style="position:center">
+            <h2 class="account-heading d-flex justify-content-center">{{ profile.user.first_name}} {{ profile.user.last_name }}</h2>
+            <h6><p class="text-secondary d-flex justify-content-center">{{ profile.current_position }}</p></h6>
+            <p class="text-secondary d-flex justify-content-center text-center"><i>" {{ profile.bio }} "</i></p>
+            {% if profile.user == user %}
+            <div class="d-flex justify-content-center align-self-end">
+                <a class="btn-btn secondary btn-sm mt-1 mb-1 d-inline" href="{% url 'profile' %}">Edit Profile</a>
+                <a class="btn-btn secondary btn-sm mt-1 mb-1 d-inline" href="{% url 'password_reset' %}">Change Password</a>
+            </div>
+            {% endif %}
+        </div>
+    </div>
+    <br/>
+    <div>
+        <h5>Contact info</h5>
+        <div class="d-flex justify-content-start">
+        <p class="d-inline pr-4 text-secondary">Telephone: {{ profile.telephone }}</p>
+        <p class="d-inline pr-4 text-secondary">Email address: {{ profile.user.email }}</p>
+        </div>
+        <br/>
+        <div class="d-flex justify-content-around">
+            {% if profile.facebookURL %}
+        <a href="{{ profile.facebookURL }}"><i class="fa fa-facebook"></i></a>
+            {% endif %} {%if profile.instagramURL %}
+        <a href="{{ profile.instagramURL }}"><i class="fa fa-instagram"></i></a>
+            {% endif %} {%if profile.linkedinURL %}
+        <a href="{{ profile.linkedinURL }}"><i class="fa fa-linkedin"></i></a>
+            {% endif %} {%if profile.twitterURL %}
+        <a href="{{ profie.twitterURL }}"><i class="fa fa-twitter"></i></a>
+            {% endif %}
+        </div>
+    </div>
+    <br/>
+    <div>
+        <h5>About</h5>
+        <p class="text-secondary">Birthday: {{ profile.birthday}}</p>
+        <p class="text-secondary">University: {{ profile.university }}</p>
+        <p class="text-secondary">Member of: </p>
+    </div>
+
+</div>
+
+
+{% endblock content %}

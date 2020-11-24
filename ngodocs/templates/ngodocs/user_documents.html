@@ -1,0 +1,24 @@
+{% extends "announcements/base.html" %}
+{% load static %}
+{% block content %}
+
+{% for doc in docs %}
+
+    <article class="media content-section">
+    <div class="media-body">
+        <h6><a class="article-title" href="{{ doc.document.url }}">{{ doc.title }}
+        </a></h6>
+        <div class="d-flex justify-content-between">
+            <small class="text-muted">status: {{ doc.status }}</small>
+            <div>
+            {% for tag in doc.tag.all %}
+              <small class="text-muted">{{ tag }} </small>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+    </article>
+
+{% endfor %}
+
+{% endblock content %}

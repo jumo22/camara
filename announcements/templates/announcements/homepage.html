@@ -1,0 +1,30 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!--Bootstrap CSS-->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" type="text/css" href="{% static 'announcements/homepage.css' %}">
+
+
+    {% if title %}
+        <title>Camara - {{ title }}</title>
+    {% else %}
+        <title>Camara</title>
+    {% endif %}
+</head>
+<body>
+<div id="cf" class="centeredlogo">
+        <div class="d-flex justify-content-center">
+            <img id="cf_onclick" class="top img-fluid d-flex justify-content-center" src="static/logo.png" style="width:40%"/>
+        </div>
+        <div class="bottom d-flex justify-content-center">
+                <a class="btn btn-outline-info d-flex justify-content-center" href="{% url 'login' %}">Login</a>
+        </div>
+</div>
+
+</body>
+</html>

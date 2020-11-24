@@ -1,0 +1,110 @@
+{% extends "announcements/base.html" %}
+{% load crispy_forms_tags %}
+
+{% block searchthing %}
+  <form method="get">
+<!--            {{ myFilterAnn.form|crispy }}-->
+<!--            {{ myFilterEvents.form|crispy }}-->
+<!--            {{ myFilterNGODocs.form|crispy }}-->
+      {{ form|crispy }}
+            <button class="btn btn-info" type="submit">Search</button>
+  </form>
+  <br/>
+{% endblock searchthing %}
+
+{% block content %}
+{% if announcements or events or ngodocs %}
+    {% if announcements %}
+    <h5> Results in announcements: </h5>
+    {% for announcement in announcements %}
+            <article class="media content-section">
+              <div class="media-body">
+                <div class="article-metadata">
+                  <a class="mr-2" href="#">{{ announcement.author }}</a>
+                 <small class="text-muted"> {{ announcement.date_posted|date:"j F Y, H:i" }}</small>
+                </div>
+                <h2><a class="article-title" href="{% url 'announcement-detail' announcement.id %}">{{ announcement.title }}
+                </a></h2>
+                <p class="article-content">{{ announcement.content }}</p>
+                <img src="{{ announcement.image.url }}" alt="Unable to load image" style="width:200px">
+                <div class="d-flex justify-content-end">
+                {% for tag in announcement.tag.all %}
+                    <small class="text-muted pr-1">{{ tag }} </small>
+                {% endfor %}
+                </div>
+              </div>
+            </article>
+        {% endfor %}
+        {% endif %}
+        {% if events %}
+        <h5> Results in events: </h5>
+        {% for event in events %}
+            <article class="media content-section">
+              <div class="media-body">
+                <div class="article-metadata">
+                  <a class="mr-2" href="#">{{ event.author }}</a>
+                 <small class="text-muted"> {{ event.start_time|date:"j F Y, H:i" }}</small>
+                </div>
+                <h2><a class="article-title" href="{% url 'cal:event-detail' event.id %}">{{ event.title }}
+                </a></h2>
+                <p class="article-content">{{ event.description }}</p>
+                <img src="{{ event.image.url }}" alt="Unable to load image" style="width:200px">
+                <div class="d-flex justify-content-end">
+                    {% for tag in event.tag.all %}
+                        <small class="text-muted pr-1">{{ tag }} </small>
+                    {% endfor %}
+                </div>
+              </div>
+            </article>
+        {% endfor %}
+        {% endif %}
+        {% if ngodocs %}
+        <h5> Results in NGO documents: </h5>
+        {% for ngodoc in ngodocs %}
+            <article class="media content-section">
+              <div class="media-body">
+                <div class="article-metadata">
+                  <a class="mr-2" href="#">{{ ngodoc.author }}</a>
+                 <small class="text-muted"> {{ ngodoc.date_posted|date:"j F Y, H:i" }}</small>
+                </div>
+                <h2><a class="article-title" href="#">{{ ngodoc }}
+                </a></h2>
+                <div class="d-flex justify-content-between">
+                <small class="text-muted">status: {{ ngodoc.status }}</small>
+                    <div>
+                    {% for tag in ngodoc.tag.all %}
+                          <small class="text-muted pr-1">{{ tag }} </small>
+                    {% endfor %}
+                    </div>
+                </div>
+              </div>
+            </article>
+        {% endfor %}
+        {% endif %}
+        {% if is_paginated %}
+
+            {% if page_obj.has_previous %}
+                <a class="btn btn-outline-info mb-4" href="?page=1">First</a>
+                <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.previous_page_number }}">Previous</a>
+            {% endif %}
+
+            {% for num in page_obj.paginator.page_range %}
+                {% if page_obj.number == num %}
+                    <a class="btn btn-info mb-4" href="?page={{ num }}">{{ num }}</a>
+                {% elif num > page_obj.number|add:'-3' and num < page_obj.number|add:'3' %}
+                     <a class="btn btn-outline-info mb-4" href="?page={{ num }}">{{ num }}</a>
+                {% endif %}
+            {% endfor %}
+
+            {% if page_obj.has_next %}
+                <a class="btn btn-outline-info mb-4" href="{{ page_obj.next_page_number }}">Next</a>
+                <a class="btn btn-outline-info mb-4" href="?page={{ page_obj.paginator.num_pages }}">Last</a>
+            {% endif %}
+
+        {% endif %}
+    {% else %}
+        Sorry, no results match you search! Try with a different combination.
+    {% endif %}
+
+
+{% endblock content %}

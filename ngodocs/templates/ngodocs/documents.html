@@ -1,0 +1,53 @@
+{% extends "announcements/base.html" %}
+{% load static %}
+{% block content %}
+<h2>Documents and more info</h2>
+<div>
+<h5 class="pt-4 pb-2" style="color: #0098cc">NGO Internal Regulations and Standard Operating Procedures</h5>
+    {% for doc in docs.reg_docs %}
+
+    <article class="media content-section">
+    <div class="media-body">
+        <div class="d-flex justify-content-between">
+            <h6><a class="article-title" href="{{ doc.document.url }}">{{ doc.title }}
+            </a></h6>
+            <small class="text-muted">status: {{ doc.status }}</small>
+        </div>
+        <div class="d-flex justify-content-between">
+            <small class="text-muted">added: {{doc.date_posted|date:"j F Y, H:i"}}</small>
+            <div>
+            {% for tag in doc.tag.all %}
+              <small class="text-muted">{{ tag }} </small>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+    </article>
+
+    {% endfor %}
+
+<h5 class="pt-4 pb-2" style="color: #0098cc">Other Documents</h5>
+    {% for doc in docs.rest_docs %}
+
+    <article class="media content-section">
+    <div class="media-body">
+        <div class="d-flex justify-content-between">
+            <h6><a class="article-title" href="{{ doc.document.url }}">{{ doc.title }}
+            </a></h6>
+            <small class="text-muted">status: {{ doc.status }}</small>
+        </div>
+        <div class="d-flex justify-content-between">
+            <small class="text-muted">added: {{doc.date_posted|date:"j F Y, H:i"}}</small>
+            <div>
+            {% for tag in doc.tag.all %}
+              <small class="text-muted">{{ tag }} </small>
+            {% endfor %}
+            </div>
+        </div>
+    </div>
+    </article>
+
+    {% endfor %}
+
+</div>
+{% endblock content %}
