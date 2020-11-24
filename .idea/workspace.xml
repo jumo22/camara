@@ -2,106 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="ed239cb4-b037-4809-a599-ddfc6400209f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/announcements/migrations/0002_auto_20201124_1524.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/announcements/static/announcements/logo.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/announcements/filters.py" beforeDir="false" afterPath="$PROJECT_DIR$/announcements/filters.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/announcements/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/announcements/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/announcements/migrations/0002_auto_20200503_1619.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/announcements/migrations/0003_auto_20200527_1254.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/announcements/migrations/0004_auto_20200610_1247.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/announcements/migrations/0005_auto_20200610_1345.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/announcements/migrations/0006_news.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/announcements/migrations/0007_news_date_posted.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/announcements/migrations/0008_auto_20200701_1305.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/announcements/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/announcements/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/announcements/signals.py" beforeDir="false" afterPath="$PROJECT_DIR$/announcements/signals.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/announcements/static/announcements/main.css" beforeDir="false" afterPath="$PROJECT_DIR$/announcements/static/announcements/main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/announcements/templates/announcements/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/announcements/templates/announcements/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/announcements/templates/announcements/home.html" beforeDir="false" afterPath="$PROJECT_DIR$/announcements/templates/announcements/home.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/announcements/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/announcements/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cal/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/cal/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/cal/migrations/0002_remove_event_author.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cal/migrations/0003_event_author.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cal/migrations/0004_auto_20200528_2337.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cal/migrations/0005_auto_20200610_1345.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cal/migrations/0006_auto_20200610_1455.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cal/migrations/0007_reminder.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cal/migrations/0008_auto_20200627_1547.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cal/migrations/0009_auto_20200627_1555.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cal/migrations/0010_auto_20200627_1606.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cal/migrations/0011_auto_20200627_2315.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cal/migrations/0012_event_facebookurl.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/cal/templates/cal/base.html" beforeDir="false" afterPath="$PROJECT_DIR$/cal/templates/cal/base.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/class.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/db.sqlite3" beforeDir="false" afterPath="$PROJECT_DIR$/db.sqlite3" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/announcements/860x394.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/announcements/860x394_s8ndRJx.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/announcements/92173921_10157182867295949_4241571910388809728_o.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/announcements/92173921_10157182867295949_4241571910388809728_o_HrvGdy1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/announcements/IMG_20150920_194721.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/announcements/P_20200216_141109.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/announcements/P_20200216_141109_dpDbbSI.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/announcements/character-04.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/announcements/sesiune.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/announcements/shang_bucket.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/announcements/the-hack-on-innovation_131.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/events/104205316_3306292389401758_3627090972113610549_o.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/events/10684-1024x575.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/events/20191214_201953.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/events/20191214_201953_fPIjrpw.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/events/20191214_201953_yrTbuwX.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/events/511e4UuQzbL._SX260_.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/events/860x394.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/events/IMG_20150914_110523_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/events/IMG_20151026_164152_1.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/events/ag.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/events/carantina_cover.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/events/meeting.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/events/pasted_image_0.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/events/pasted_image_0_O8mMspi.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/events/sesiune.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/events/the-hack-on-innovation_131.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/events/unnamed.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/ngo-docs/BA_ChiștocăriaInt.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/ngo-docs/BEST_Visual_Identity_document_-_for_web.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/ngo-docs/Coordination_of_planning_of_large_scale_projects-solved-example.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/ngo-docs/Coordination_of_planning_of_large_scale_projects-solved-example_cvHG3v3.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/ngo-docs/Coordination_of_planning_of_large_scale_projects-solved-example_lubCKgH.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/ngo-docs/History_Book_of_BEST_-_30_Years.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/ngo-docs/Internal_Regulations.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/ngo-docs/Internal_Structure_of_BEST_-_Matrix_Structure_document.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/ngo-docs/tips_and_tricks_for_video_editing.pdf" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/profile_pics/20200128_224611.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/profile_pics/IMG-20180729-WA0010.jpeg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/profile_pics/IMG_20200503_161347_283.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/profile_pics/ale.JPG" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/profile_pics/lightbulb-08.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/profile_pics/me2-11.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/profile_pics/meh.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/media/profile_pics/unnamed.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ngodocs/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/ngodocs/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ngodocs/migrations/0002_ngodocument_name.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ngodocs/migrations/0003_auto_20200629_1910.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ngodocs/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/ngodocs/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ngodocs/static/agga2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ngodocs/static/mwam2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ngodocs/static/together2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/ngodocs/templates/ngodocs/ngodocument_detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/ngodocs/templates/ngodocs/ngodocument_detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ngodocs/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/ngodocs/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ngodocs/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/ngodocs/views.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/scmsngo/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/scmsngo/settings.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/migrations/0001_initial.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/migrations/0001_initial.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/migrations/0002_auto_20200508_0257.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/migrations/0003_auto_20200508_0351.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/migrations/0004_auto_20200508_0407.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/migrations/0005_profile_telephone.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/migrations/0006_auto_20200625_1952.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/migrations/0007_auto_20200625_2001.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/migrations/0008_auto_20200625_2009.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/migrations/0009_auto_20200625_2019.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/migrations/0010_profile_current_position.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/users/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/users/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -136,7 +38,7 @@
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../incercare" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="run.code.analysis.last.selected.profile" value="aDefault" />
   </component>
   <component name="RecentsManager">
